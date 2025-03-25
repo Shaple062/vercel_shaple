@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>林聖昌簡介</title>
+
+	<style type="text/css">
+		* { font-family:"標楷體"; margin-left:auto; margin-right:auto;}
+		h1 {color:blue; font-size:60px;}
+		h2 {color:#33ff33; font-size:40px;}
+	</style>
+
+	<script>
+		function change1() {
+  			document.getElementById("pic").src = "/static/mountain.jpg";
+  			document.getElementById("h2text").innerText = "靜宜資管";
+		}
+
+		function change2() {
+  			document.getElementById("pic").src = "/static/cliff.jpg";
+  			document.getElementById("h2text").innerText = "Shang-Chung Lin";
+		}
+	</script>
+
+
+</head>
+<body>
+	<?php echo date("Y-m-d") ?>
+
+	<table width="90%">
+		<tr>
+			<td>
+				<img src="cliff.jpg" width="110%" id="pic"
+			onmouseover="change1()" onmouseout="change2()"></img>
+
+			</td>
+
+			<td>
+				<h1>林聖昌</h1>
+				<h2 id="h2text">
+					Shang-Chung Lin</h2>
+			</td>
+		</tr>
+	</table>
+
+	<table width="70%" border="1">
+		<tr>
+			<td>
+	靜宜大學網頁:<a href="https://www.pu.edu.tw">https://www.pu.edu.tw</a><br>
+	Ig:<a href="https://www.instagram.com/rice_shaple">https://www.instagram.com/rice_shaple</a><br>
+	Tel:<a href="tel 04-26328001#18110">04-26328001#18110</a><br>
+	E-mail:<a href="mailto shangchunglin@gmail.com">shangchunglin@gmail.com</a><br>
+</td>
+
+<td>
+	大象席地而坐電影配樂<br>
+	<audio controls>
+		<source src="/static/elephant.mp3" type="audio/mP3">
+	</audio><br>
+</td>
+<td>
+	<iframe
+    allow="microphone;"
+    width="350"
+    height="430"
+    src="https://console.dialogflow.com/api-client/demo/embedded/4571376d-3fa5-413d-ae08-5288b975bab5">
+</iframe>
+</td>
+<td>
+	不要去臺灣<br>
+	<iframe src="https://www.youtube.com/embed/pW88QFpHXa8" allowfullscreen></iframe>
+</td>
+</table>
+
+</body>
+</html>
