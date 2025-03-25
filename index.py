@@ -5,7 +5,13 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "Hello 林聖昌"
+    homepage = "<h1>林聖昌Python網頁</h1>"
+    homepage += "<a href=/mis>MIS</a><br>"
+    homepage += "<a href=/today>顯示日期時間</a><br>"
+    homepage += "<a href=/welcome?nick=tcyang>傳送使用者暱稱</a><br>"
+    homepage += "<a href=/account>網頁表單傳值</a><br>"
+    homepage += "<a href=/about>聖昌簡介網頁</a><br>"
+    return homepage
 
 @app.route("/mis")
 def course():
@@ -31,9 +37,6 @@ def account():
         return result
     else:
         return render_template("account.html")
-
-
-
 
 if __name__ == "__main__":
     app.run()
